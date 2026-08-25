@@ -18,7 +18,7 @@ const SUNSET = {
 export default function Home() {
   return (
     <main className="flex min-h-dvh flex-col overflow-hidden">
-      <section className="relative flex flex-1 flex-col items-center justify-center bg-navy px-6 pt-24 pb-12 text-center">
+      <section className="relative flex flex-1 flex-col items-center justify-center bg-navy px-6 pt-20 pb-10 text-center">
         <GoldDust className="opacity-45" />
 
         <h1 className="relative font-display text-[clamp(3.25rem,13vw,9rem)] italic leading-[0.95] text-gold">
@@ -30,11 +30,11 @@ export default function Home() {
       </section>
 
       {/* The arc lives inside the sunset band so the sky shows through it. */}
-      <section style={SUNSET} className="relative pb-12">
+      <section style={SUNSET} className="relative pb-10">
         <GoldArc />
 
-        <div className="px-6 pt-10 sm:pt-16">
-          <div className="mx-auto max-w-xl rounded-3xl border border-gold/25 bg-navy-deep/70 px-6 py-9 text-center shadow-2xl shadow-navy-deep/40 backdrop-blur-md sm:px-10 sm:py-11">
+        <div className="px-6 pt-10 sm:pt-12">
+          <div className="mx-auto max-w-xl rounded-3xl border border-gold/25 bg-navy-deep/70 px-6 py-9 text-center shadow-2xl shadow-navy-deep/40 backdrop-blur-md sm:px-10 sm:py-10">
             <h2 className="font-display text-[clamp(1.75rem,5vw,2.6rem)] italic leading-tight text-gold">
               Join our mailing list
             </h2>
@@ -49,7 +49,7 @@ export default function Home() {
           </div>
         </div>
 
-        <footer className="relative mx-auto mt-14 flex max-w-xl flex-col items-center gap-6 px-6 text-center">
+        <footer className="relative mx-auto mt-11 flex max-w-xl flex-col items-center gap-5 px-6 text-center">
           <SocialLinks />
 
           <a

@@ -3,10 +3,12 @@ import { Jost, Playfair_Display } from "next/font/google";
 import { site } from "@/lib/site";
 import "./globals.css";
 
+// Only the italic 400 is ever set — loading the roman or heavier weights just
+// costs a preload the page never redeems.
 const playfair = Playfair_Display({
   subsets: ["latin"],
-  style: ["italic", "normal"],
-  weight: ["400", "500", "600"],
+  style: ["italic"],
+  weight: ["400"],
   variable: "--font-playfair",
   display: "swap",
 });

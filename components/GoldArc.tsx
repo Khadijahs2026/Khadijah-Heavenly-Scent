@@ -25,7 +25,7 @@ export function GoldArc() {
       <svg
         viewBox="0 0 1440 205"
         preserveAspectRatio="none"
-        className="block h-[9vw] max-h-[128px] min-h-[52px] w-full"
+        className="block h-[9vw] max-h-[112px] min-h-[52px] w-full"
       >
         <defs>
           <linearGradient id="arc-gold" x1="0" y1="0" x2="1" y2="0">
