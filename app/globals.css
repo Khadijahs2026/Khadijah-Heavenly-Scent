@@ -1,17 +1,5 @@
 @import "tailwindcss";
 
-/*
-  Landscape screens big enough to lay the form over the poster instead of
-  beneath it.
-
-  All three conditions earn their place. Aspect ratio, not width alone: an iPad
-  Pro in portrait is 1024px wide but shaped nothing like a desktop, and the
-  overlay would crop the wordmark off the sides. And a height floor, because the
-  form is about 365px tall — in a shorter window the overlay would sit straight
-  on top of the lettering. Below any of these the page falls back to stacking
-  the form beneath the poster, and scrolls.
-*/
-@custom-variant wide (@media (min-width: 1024px) and (min-height: 600px) and (min-aspect-ratio: 1 / 1));
 
 @theme {
   --color-navy: #142f66;

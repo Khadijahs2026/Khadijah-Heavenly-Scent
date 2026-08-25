@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 
 export default function Home() {
   return (
-    <main className="flex min-h-dvh flex-col bg-navy-deep wide:h-dvh">
+    <main className="flex min-h-dvh flex-col bg-navy-deep">
       <h1 className="sr-only">{site.name}</h1>
 
       <HeroPoster />
@@ -16,12 +16,12 @@ export default function Home() {
         whatever this leaves, which is what keeps the page to a single screen.
       */}
       {/*
-        Below `wide` the poster's height is fixed by its aspect ratio, so any
-        space left on a tall screen collects here — centring the content keeps
-        that slack balanced instead of pooling under the footer. On `wide` it is
-        the poster that flexes, so this reverts to its natural height.
+        The poster's height is set by its aspect ratio, so on a screen taller
+        than poster + form the slack collects here — centring keeps it balanced
+        instead of pooling under the footer. Where there is no slack (any wide
+        screen, where the poster alone exceeds the viewport) this is inert.
       */}
-      <section className="flex flex-1 flex-col items-center justify-center px-6 pt-5 pb-7 text-center wide:flex-none wide:justify-start">
+      <section className="flex flex-1 flex-col items-center justify-center px-6 pt-6 pb-8 text-center">
         <h2 className="font-display text-[clamp(1.6rem,4vw,2.25rem)] italic leading-tight text-gold">
           Join our mailing list
         </h2>

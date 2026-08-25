@@ -82,27 +82,26 @@ original.
 
 ### How it is fitted
 
-The poster always sits **above** the form, never behind it, and the page fits a
-single screen at every size. What changes is how the poster meets its frame
-([`components/HeroPoster.tsx`](components/HeroPoster.tsx)):
+The poster is always **full width** and always **above** the form.
 
 | Screen | Frame | Fit |
 | --- | --- | --- |
 | Phones | `aspect-[5/4]` | `cover` — trims sky left and right |
-| ≥640px portrait | `aspect-[3/2]` | `cover` — trims a little less |
-| `wide` (landscape, ≥1024px) | flexes to fill what the form leaves, capped at `72vh` | `contain` — whole poster, blurred copy fills the margins |
+| ≥640px | `aspect-[3/2]` | `cover` — trims a little less |
+| ≥1024px | `aspect-[5408/3072]` — the poster's own ratio | nothing cropped at all |
 
-The split matters. On a phone the frame is *narrower* than the poster, so
-`cover` only shaves the edges and the wordmark — which spans about 44% of the
-poster's width — is never touched. On a desktop the frame ends up far *wider*
-than the poster once the form takes its share of the height, and `cover` there
-would have to discard roughly a third of the poster's height. That is what used
-to cut off the wildflowers. `contain` fits it whole instead, and a blurred,
-navy-tinted copy of the poster fills the space either side.
+From `lg` the frame matches the poster's ratio exactly, so it fills the width
+edge to edge with the whole image intact. At that width it is taller than most
+viewports — 1022px on an 1800px-wide screen — so the form sits below the fold
+and the page scrolls. That is unavoidable: at full width the poster alone is
+taller than the viewport before the form exists. Full-bleed, uncropped, and
+one-screen cannot all be true at once, and full-bleed and uncropped were the
+two that mattered.
 
-**If you change the frame or the fit, check the wordmark still clears the crop**
-— on the `cover` breakpoints a frame taller than roughly 1:1 starts eating the
-lettering from the sides.
+Below `lg` a poster-shaped frame would be a thin strip on a phone, so the frame
+is squarer and `cover` trims the edges instead. Both ratios stay wide enough
+that the wordmark, which spans about 44% of the poster's width, is never
+touched — **re-check that if you change them.**
 
 ## Notes
 
