@@ -30,11 +30,13 @@ export const metadata: Metadata = {
     url: site.url,
     siteName: site.name,
     type: "website",
+    images: [{ url: "/hero-1536.jpg", width: 1536, height: 872, alt: site.name }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${site.name} — Coming Soon`,
     description: site.description,
+    images: ["/hero-1536.jpg"],
   },
 };
 
