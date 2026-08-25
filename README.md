@@ -57,9 +57,8 @@ function logs prefixed with `[subscribe]`.
 ## Things the client will want changed
 
 - **Social links** — [`lib/site.ts`](lib/site.ts) exports a `socials` array.
-  The Instagram entry currently points at a placeholder URL. Replace the `href`,
-  and add Facebook or TikTok entries if wanted (icons for both already exist in
-  [`components/SocialLinks.tsx`](components/SocialLinks.tsx)). An empty array
+  Add Facebook or TikTok entries if wanted; icons for both already exist in
+  [`components/SocialLinks.tsx`](components/SocialLinks.tsx). An empty array
   renders no social row at all.
 - **Copy** — headline and body text live in `app/page.tsx`; the brand name,
   tagline, email and meta description live in `lib/site.ts`.

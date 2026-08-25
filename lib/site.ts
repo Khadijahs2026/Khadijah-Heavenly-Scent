@@ -8,16 +8,14 @@ export const site = {
 } as const;
 
 /**
- * Social profiles shown in the footer.
- *
- * TODO: replace the placeholder href with the client's real profile URL.
- * Add or remove entries freely — the footer renders whatever is in this list,
- * and renders nothing at all if the list is empty.
+ * Social profiles shown in the footer. Add or remove entries freely — the
+ * footer renders whatever is in this list, and renders nothing at all if the
+ * list is empty. Icons for Facebook and TikTok already exist in SocialLinks.
  */
 export const socials: { label: string; href: string; icon: "instagram" | "facebook" | "tiktok" }[] = [
   {
     label: "Instagram",
-    href: "https://instagram.com/",
+    href: "https://www.instagram.com/khadijahsheavenlyscents",
     icon: "instagram",
   },
 ];
