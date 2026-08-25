@@ -129,4 +129,4 @@ clears the crop.**
 ## Deploying
 
 Push to GitHub, import the repo in Vercel, add the environment variables, and
-point `khadijahs.com` at the project under **Settings → Domains**.
+point `khadijahs.com` at the project under **Settings → Domains**
