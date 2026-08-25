@@ -82,17 +82,27 @@ original.
 
 ### How it is fitted
 
-The poster is roughly 16:9 and phones are not, so
-[`components/HeroPoster.tsx`](components/HeroPoster.tsx) steps the frame through
-aspect ratios — 5:4 on phones, 3:2 from 640px, 16:9 from 1024px — rather than
-cropping the poster to the viewport. Narrow screens lose sky at the left and
-right; wide screens lose some foreground. Every ratio in the ladder is chosen so
-the wordmark, which spans about 44% of the poster's width, never reaches the
-crop edge.
+The poster always sits **above** the form, never behind it, and the page fits a
+single screen at every size. What changes is how the poster meets its frame
+([`components/HeroPoster.tsx`](components/HeroPoster.tsx)):
 
-**If you change a ratio or `object-position`, re-check that.** On a wide, short
-window the frame is capped at `72vh` and the crop comes off the top and bottom,
-which is the case that can clip the lettering.
+| Screen | Frame | Fit |
+| --- | --- | --- |
+| Phones | `aspect-[5/4]` | `cover` — trims sky left and right |
+| ≥640px portrait | `aspect-[3/2]` | `cover` — trims a little less |
+| `wide` (landscape, ≥1024px) | flexes to fill what the form leaves, capped at `72vh` | `contain` — whole poster, blurred copy fills the margins |
+
+The split matters. On a phone the frame is *narrower* than the poster, so
+`cover` only shaves the edges and the wordmark — which spans about 44% of the
+poster's width — is never touched. On a desktop the frame ends up far *wider*
+than the poster once the form takes its share of the height, and `cover` there
+would have to discard roughly a third of the poster's height. That is what used
+to cut off the wildflowers. `contain` fits it whole instead, and a blurred,
+navy-tinted copy of the poster fills the space either side.
+
+**If you change the frame or the fit, check the wordmark still clears the crop**
+— on the `cover` breakpoints a frame taller than roughly 1:1 starts eating the
+lettering from the sides.
 
 ## Notes
 
