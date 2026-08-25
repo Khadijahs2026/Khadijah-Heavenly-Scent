@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+/*
+  Landscape screens wide enough for the compact one-screen layout. Keyed on
+  aspect ratio as well as width: an iPad Pro in portrait is 1024px wide but
+  shaped nothing like a desktop, and there the poster would be cropped from the
+  sides hard enough to reach the wordmark.
+*/
+@custom-variant wide (@media (min-width: 1024px) and (min-aspect-ratio: 1 / 1));
+
 
 @theme {
   --color-navy: #142f66;

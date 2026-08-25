@@ -84,24 +84,29 @@ original.
 
 The poster is always **full width** and always **above** the form.
 
-| Screen | Frame | Fit |
+| Screen | Frame | Result |
 | --- | --- | --- |
-| Phones | `aspect-[5/4]` | `cover` — trims sky left and right |
-| ≥640px | `aspect-[3/2]` | `cover` — trims a little less |
-| ≥1024px | `aspect-[5408/3072]` — the poster's own ratio | nothing cropped at all |
+| Phones | `aspect-[5/4]` | `cover` trims sky left and right; whole composition kept |
+| >=640px portrait | `aspect-[3/2]` | as above, trimming less |
+| `wide` (landscape, >=1024px) | takes whatever the compact form leaves, floor `38vw` | ~86% of the poster's height, full width, one screen |
 
-From `lg` the frame matches the poster's ratio exactly, so it fills the width
-edge to edge with the whole image intact. At that width it is taller than most
-viewports — 1022px on an 1800px-wide screen — so the form sits below the fold
-and the page scrolls. That is unavoidable: at full width the poster alone is
-taller than the viewport before the form exists. Full-bleed, uncropped, and
-one-screen cannot all be true at once, and full-bleed and uncropped were the
-two that mattered.
+At full width on a desktop the poster is taller than the viewport on its own
+(1022px at 1800px wide), so something has to give. Full-bleed and the wordmark
+both had to stay, so the form is deliberately compact on `wide` — smaller
+heading, one-line copy, footer collapsed to a single row, about 210px total.
+That buys the poster roughly three quarters of the screen.
 
-Below `lg` a poster-shaped frame would be a thin strip on a phone, so the frame
-is squarer and `cover` trims the edges instead. Both ratios stay wide enough
-that the wordmark, which spans about 44% of the poster's width, is never
-touched — **re-check that if you change them.**
+`object-position: center 40%` then splits the remaining loss so the fine texture
+at the top goes before the meadow. Measured at 1530x953: the visible window is
+5.8% to 91.3% of the poster, against a wordmark at 13-30% and wildflowers at
+78-100%. Both survive.
+
+`min-h-[38vw]` is the floor — below roughly 68% of natural height a 40% share of
+the crop starts reaching the lettering, so the frame stops shrinking and the
+page scrolls rather than clipping it.
+
+**If you change the frame, the fit, or the form's height, re-check the wordmark
+clears the crop.**
 
 ## Notes
 
