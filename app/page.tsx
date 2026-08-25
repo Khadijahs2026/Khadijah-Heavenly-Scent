@@ -16,20 +16,20 @@ export default function Home() {
         onto one row, which buys the poster roughly three quarters of the screen
         while the form stays fully visible without scrolling.
       */}
-      <section className="flex flex-1 shrink-0 flex-col items-center justify-center px-6 pt-6 pb-8 text-center wide:flex-none wide:pt-4 wide:pb-5">
-        <h2 className="font-display text-[clamp(1.6rem,4vw,2.25rem)] italic leading-tight text-gold wide:text-xl">
+      <section className="flex flex-1 shrink-0 flex-col items-center justify-center px-6 pt-6 pb-8 text-center wide:flex-none wide:pt-7 wide:pb-7">
+        <h2 className="font-display text-[clamp(1.6rem,4vw,2.25rem)] italic leading-tight text-gold wide:text-[1.75rem]">
           Join our mailing list
         </h2>
-        <p className="mx-auto mt-3 max-w-md text-[0.95rem] leading-relaxed text-gold-soft/85 wide:mt-1.5 wide:max-w-3xl wide:text-[0.8rem]">
+        <p className="mx-auto mt-3 max-w-md text-[0.95rem] leading-relaxed text-gold-soft/85 wide:max-w-3xl wide:text-[0.9rem]">
           Something beautiful is on its way. Be the first to hear about our
           launch, new fragrances, and everything still to come.
         </p>
 
-        <div className="mt-6 w-full max-w-lg wide:mt-3">
+        <div className="mt-6 w-full max-w-lg wide:mt-5">
           <SignupForm />
         </div>
 
-        <footer className="flex w-full flex-col items-center gap-3 pt-6 wide:flex-row wide:justify-center wide:gap-5 wide:pt-3">
+        <footer className="flex w-full flex-col items-center gap-3 pt-6 wide:flex-row wide:justify-center wide:gap-5 wide:pt-5">
           <SocialLinks />
 
           <p className="flex flex-col items-center gap-2 text-sm tracking-wide text-gold-soft/85 sm:flex-row sm:gap-3">

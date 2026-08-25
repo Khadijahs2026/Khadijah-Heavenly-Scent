@@ -92,14 +92,15 @@ The poster is always **full width** and always **above** the form.
 
 At full width on a desktop the poster is taller than the viewport on its own
 (1022px at 1800px wide), so something has to give. Full-bleed and the wordmark
-both had to stay, so the form is deliberately compact on `wide` — smaller
-heading, one-line copy, footer collapsed to a single row, about 210px total.
-That buys the poster roughly three quarters of the screen.
+both had to stay, so the form is trimmed on `wide` — slightly smaller heading,
+one-line copy, footer collapsed to a single row, about 265px against 365px in
+the stacked layout. That buys the poster roughly three quarters of the screen
+while the form still reads at a comfortable size.
 
 `object-position: center 40%` then splits the remaining loss so the fine texture
-at the top goes before the meadow. Measured at 1530x953: the visible window is
-5.8% to 91.3% of the poster, against a wordmark at 13-30% and wildflowers at
-78-100%. Both survive.
+at the top goes before the meadow. Measured at 1800x1009: the visible window is
+10.9% to 83.7% of the poster, against a wordmark at 13-30% and wildflowers
+starting at 78%. The lettering is kept whole and the top of the meadow survives.
 
 `min-h-[38vw]` is the floor — below roughly 68% of natural height a 40% share of
 the crop starts reaching the lettering, so the frame stops shrinking and the
