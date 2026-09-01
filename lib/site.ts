@@ -18,4 +18,9 @@ export const socials: { label: string; href: string; icon: "instagram" | "facebo
     href: "https://www.instagram.com/khadijahsheavenlyscents",
     icon: "instagram",
   },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/khadijahsheavenlyscents",
+    icon: "facebook",
+  },
 ];
